@@ -1,5 +1,6 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
+  //jquery pointer to the html element that contains the input
   var loginForm = $("form.login");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
@@ -7,6 +8,7 @@ $(document).ready(function() {
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", function(event) {
     event.preventDefault();
+    //store the gather information into a obj that will be sent to the serveer
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
